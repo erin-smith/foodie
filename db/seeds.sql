@@ -1,15 +1,3 @@
-CREATE DATABASE chefs;
-USE chef;
-
--- Create the table actors.
-CREATE TABLE chefs (
-  id int AUTO_INCREMENT,
-  name varchar(30) NOT NULL,
-  awards varchar(60) NOT NULL,
-  restaurants varchar(255) NOT NULL,
-  city varchar (60) NOT NULL,
-  PRIMARY KEY(id)
-);
 
 -- Insert a set of records.
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Ilan Hall", "Top Chef Season 2 Winner", "Ramen Hood", "Los Angeles, CA");
@@ -27,7 +15,6 @@ INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Joe Flamm", "Top Ch
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Kelsey Barnard Clark", "Top Chef Season 16 Winner", "KBC", "Dothan, AL");
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Melissa King", "Top Chef Season 17 Winner", "King Sauce", "San Francisco, CA");
 
-INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Mario Batali", "Top Chef Season 6 Winner", "Sack Sandwiches (L.A.), STRFSH (Santa Monica), Voltaggio Brothers Steakhouse (Oxon Hill, Md), Estuary (Washington DC)", "Los Angeles, CA");
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Melissa Perello", "1 Michelin Star", "Frances, Octavia, M. Georgina (L.A.)", "San Francisco, CA");
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("David Chang", "2 Michelin Stars", "Momofuku Ko", "New York, NY");
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Iliana Regan", "1 Michelin Star", "Elizabeth, The Milkweed Inn", "Nahma Township, the UP, MI");
@@ -53,3 +40,30 @@ INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Joshua Skenes", "3 
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Grant Achatz", "3 Michelin Stars", "Alinea", "Chicago, IL");
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Curtis Duffy", "3 Michelin Stars", "Grace", "Chicago, IL");
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Dan Barber", "2 Michelin Stars", "Blue Hill at Stone Barns", "Pocantico Hilla, NY");
+
+
+
+
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Davin Waite", NULL, "Wrench & Rodent Seabasstropub, The Whet Noodle, The Plot", "Oceanside, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Michael Mina", "1 Michelin Star", "International Smoke, Market Restaurant and Bar", "Del Mar, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Rick Bayless", "1 Michelin star", "Red O", "San Diego, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Luciano Cibelli", NULL, "The Red Door", "San Diego, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("William Bradley", "1 Michelin Star, Relais & Châteaux Grand Chef", "Addison", "San Diego, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("David and Lesley Cohn", NULL, "333 Pacific, The Prado, Vin de Syrah, ", "San Diego, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("David Abella", NULL, "West Steak & Seafood", "Carlsbad, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Trey Foshee", "America’s Ten Best New Chefs by Food & Wine magazine","George's at the Cove, California Modern, Galaxy Taco", "La Jolla, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Jason Ambacher", "Michelin Guide- New Discovery", "Dija Mara", "Oceanside, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Eric Bost, Andrew Bachelier", "Michelin Bib Gourmand award", "Jeune et Jolie, Campfire ", "Del Mar, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Jeff Jackson", "USA Bocuse d'or Culinary Gold Cup winner", "A.R. Valentien", "La Jolla, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Tracy Borkum", NULL, "CUCINA urbana, cucina SORELLA, CUCINA enoteca", "San Diego, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Jason Knibb", "2009 San Diego Chef Hall of Fame", "Nine-Ten Restaurant and Bar", "La Jolla, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Brian Redzikowski", NULL, "Kettner Exchange, Waverly, The Grass Skirt, Good Time Poke ", "San Diego, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Brian Malarkey", "Top Chef Alumnus", "Herb and Wood, Seersucker, Herringbone, Farmer & The Seahorse", "San Diego, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Claudette Zepeda", "Top Chef Alumnus", "Vaga", "Encinitas, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Brad Wise", "U-T 2019 Chef of the Year", "Trust, The Wise Ox Butcher & Eatery, Fort Oak", "San Diego, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Takashi Endo", NULL, "Menya Ultra", "San Diego, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Jason McLeod", "2 Michelin Stars", "Ironside Fish and Oyster, Soda and Swine, Underbelly, Neighborhood", "San Diego, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Angelo Sosa", "Top Chef Alumnus", "Death by Tequila", "Encinitas, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Bertrand Hug, Stephane Voitzwinkler", NULL, "Mister A's, Mille Fleurs", "San Diego, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Chef Ota", NULL, "Sushi Ota", "San Diego, CA");
+INSERT INTO local (name, awards, restaurants, city) VALUES ("Bernard Guillas", "The MICHELIN Plate: Good cooking", "The Marine Room", "La Jolla, CA");

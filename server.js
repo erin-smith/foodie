@@ -1,7 +1,5 @@
 // npm packages
 const express = require('express');
-const session = require('express-session');
-const passport = require('./config/passport');
 const compression = require('compression')
 
 // Setting up port and requiring models
@@ -15,10 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-// Sessions- track our user's login status
-app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
