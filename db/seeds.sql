@@ -26,6 +26,10 @@ INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Michael Tusk", "3 M
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Dominique Crenn", "3 Michelin Stars", "Atelier Crenn, Bar Crenn", "San Francisco, CA");
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Suzette Gresham", "2 Michelin Stars", "Acquerello", "San Francisco, CA");
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Niki Nakayama", "2 Michelin Stars", "n/naka", "Los Angeles, CA");
+INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Alice Waters", "1 Michelin Star", "Chez Panisse", "Berkeley, CA");
+INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Jeremiah Tower", "James Beard Foundation Award for Best Chef in California", "Stars (closed), Tavern on the Green", "New York, NY");
+INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Paul Bertolli", "James Beard Foundation Award for Best Chef in California", "Oliveto (closed), Fra’ Mani Handcrafted Foods", "Los Angeles, CA");
+INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Jacques Pépin", "24 James Beard Foundation Awards,  Légion d'honneur", "Hôtel Plaza Athénée, Le Pavillon, Howard Johnson's, La Potagerie (all CLOSED)", "New York, NY");
 
 
 INSERT INTO chefs (name, awards, restaurants, city) VALUES ("Daniel Boulud", "2 Michelin Stars", "Daniel", "New York, NY");
