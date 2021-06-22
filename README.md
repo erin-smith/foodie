@@ -1,7 +1,7 @@
 # Foodie: Great Chefs & Restaurant Finder
 
 ## Description
-  An Interactive Food Dashboard app that Celebrates chefs that have revolutionized American Cuisine, Showcases Local favorites in San Diego, CA, and allows users to query a [TripAdvisor API](https://developer-tripadvisor.com/content-api/) to search find their own new favorite restaurants!  The app displays scrollable Transformative chef summaries, a page with local Hotspots in San Diego, a Search page for users, and a Suggestion page for updates and new info to keep the app current and relevant.    
+  An Interactive Food Dashboard app that Celebrates chefs that have revolutionized American Cuisine, Showcases Local favorites in San Diego, CA, and allows users to query a [FourSquare API](https://www.developer.foursquare.com) to search find their own new favorite restaurants!  The app displays scrollable "Transformative" chef summaries, a page with local Hotspots in San Diego, a Search page for users, and a Suggestion Box page for updates and new info to keep the app current and relevant.    
     
   [Link to project](https://github.com/erin-smith/foodie):https://github.com/erin-smith/foodie
 
