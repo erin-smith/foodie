@@ -1,3 +1,5 @@
+function Suggest(){
+return(
 <form className="myForm">
   <label htmlfor="customer_name">Chef Name </label>
   <input type="text" name="chef_name" id="chef_name" required/>
@@ -25,3 +27,7 @@
 
   <button>Submit Suggestion</button>
 </form>
+)
+}
+
+export default Suggest;

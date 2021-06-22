@@ -1,6 +1,6 @@
 // npm packages
 const express = require('express');
-const compression = require('compression')
+const compression = require('compression');
 
 // Setting up port and requiring models
 const PORT = process.env.PORT || 3001;
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 
 // ROUTES
 require('./routes/api-routes.js')(app);
-//require('./routes/html-routes.js')(app);
+require('./routes/html-routes.js')(app);
 
 // Sync database with sequelize
 db.sequelize.sync().then(function() {
