@@ -42,8 +42,8 @@ h6 {
 }
 
 .promo-item {
-    height: 300px;
-    line-height: 300px;
+    height: 250px;
+    line-height: 250px;
     text-align: center;
 }
 
@@ -61,21 +61,24 @@ h6 {
 
 .item-1 {
 	background: url('../../src/assets/images/radish.jpeg');
+  background-size: cover;
 	}
 	
 .item-2 {
 	background: url('../../src/assets/images/pancake.jpg');
+  background-size: 50%;
 	}
 	
 .item-3 {
 	background: url('../../src/assets/images/caprese.jpg');
+  background-size: 50%;
 	} 
 		
 .item-1,
 .item-2,
 .item-3 {
-	background-size: cover;
-	background-position: cover;
+	background-size:cover;
+	background-position:center ;
 	}
 
 .footer-info {
@@ -102,7 +105,7 @@ h6 {
     
 footer .small-print {
 	background-color: #fff;
-	padding: 10px 0;
+	padding: 10px;
 	text-align: center;
 }
 
@@ -115,8 +118,10 @@ Override Bootstrap Classes
 
 /* Links */
 a {
-  color: orange;
+  color: gray;
   text-decoration: none;
+  font-size: 18px;
+  text-align: center;
 }
 a:hover,
 a:focus {
@@ -131,6 +136,7 @@ a:focus {
 }
 .navbar-default .navbar-brand {
   color: #dd845a;
+  text-align: center;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {

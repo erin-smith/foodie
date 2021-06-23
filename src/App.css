@@ -5711,8 +5711,8 @@ html {
   .btn-toolbar:after,
   .btn-group-vertical > .btn-group:before,
   .btn-group-vertical > .btn-group:after,
-  .nav:before,
-  .nav:after,
+  /* .nav:before,
+  .nav:after, */
   .navbar:before,
   .navbar:after,
   .navbar-header:before,
