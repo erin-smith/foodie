@@ -83,9 +83,9 @@ html {
   svg:not(:root) {
     overflow: hidden;
   }
-  figure {
+  /* figure {
     margin: 1em 40px;
-  }
+  } */
   hr {
     height: 0;
     -webkit-box-sizing: content-box;
@@ -112,7 +112,7 @@ html {
     color: inherit;
   }
   button {
-    overflow: visible;
+    overflow: hidden;
   }
   button,
   select {
@@ -260,12 +260,12 @@ html {
        -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
-  *:before,
+  /* *:before,
   *:after {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
-  }
+  } */
   html {
     font-size: 10px;
   
@@ -303,7 +303,7 @@ html {
   figure {
     margin: 0;
   }
-  img {
+  /* img {
     vertical-align: middle;
   }
   .img-responsive,
@@ -314,14 +314,14 @@ html {
     display: block;
     max-width: 100%;
     height: auto;
-  }
-  .img-rounded {
+  } */
+  /* .img-rounded {
     border-radius: 6px;
   }
   .img-thumbnail {
     display: inline-block;
     max-width: 100%;
-    height: auto;
+    height: 100%;
     padding: 4px;
     line-height: 1.42857143;
     background-color: #fff;
@@ -333,7 +333,7 @@ html {
   }
   .img-circle {
     border-radius: 50%;
-  }
+  } */
   hr {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -379,7 +379,7 @@ html {
     line-height: 1.1;
     color: inherit;
   }
-  h1 small,
+  /* h1 small,
   h2 small,
   h3 small,
   h4 small,
@@ -406,18 +406,18 @@ html {
     font-weight: normal;
     line-height: 1;
     color: #777;
-  }
-  h1,
+  } */
+  /* h1,
   .h1,
   h2,
   .h2,
   h3,
   .h3 {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
-  }
-  h1 small,
-  .h1 small,
+  } */
+  /* h1 small, */
+  /* .h1 small,
   h2 small,
   .h2 small,
   h3 small,
@@ -428,9 +428,9 @@ html {
   .h2 .small,
   h3 .small,
   .h3 .small {
-    font-size: 65%;
-  }
-  h4,
+    /* font-size: 65%; */
+  /* } */ */
+  /* h4,
   .h4,
   h5,
   .h5,
@@ -438,8 +438,8 @@ html {
   .h6 {
     margin-top: 10px;
     margin-bottom: 10px;
-  }
-  h4 small,
+  } */
+  /* h4 small,
   .h4 small,
   h5 small,
   .h5 small,
@@ -452,7 +452,7 @@ html {
   h6 .small,
   .h6 .small {
     font-size: 75%;
-  }
+  } */
   h1,
   .h1 {
     font-size: 36px;
@@ -4199,6 +4199,7 @@ html {
     margin-bottom: 30px;
     color: inherit;
     background-color: #eee;
+    
   }
   .jumbotron h1,
   .jumbotron .h1 {
@@ -4206,8 +4207,8 @@ html {
   }
   .jumbotron p {
     margin-bottom: 15px;
-    font-size: 21px;
-    font-weight: 200;
+    font-size: 24px;
+    font-weight: 320;
   }
   .jumbotron > hr {
     border-top-color: #d5d5d5;

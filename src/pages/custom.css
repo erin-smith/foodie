@@ -13,9 +13,9 @@ h6 {
 	}
 	
 .feature {
-	background: url('../../src/assets/images/light_bulb.jpg');
-	background-position: top right;
-	background-size: cover;
+	background: url('../../src/assets/images/burger1.jpg');
+	background-position:center;
+	background-size:cover;
 	background-color: #dd845a;
 	color: white;
 	text-shadow: 1px 1px 8px black;
@@ -26,8 +26,8 @@ h6 {
 	border-color: black;
 	border-top-style: solid;
 	border-bottom-style: solid;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 0;
 	}
 
 .promo,
@@ -42,13 +42,13 @@ h6 {
 }
 
 .promo-item {
-    height: 200px;
-    line-height: 180px;
+    height: 300px;
+    line-height: 300px;
     text-align: center;
 }
 
 .promo-item:hover {
-    background-size: 110%; 
+    background-size: 140%; 
     border: 5px solid black;
     line-height: 170px;
 }
@@ -60,47 +60,26 @@ h6 {
 }
 
 .item-1 {
-	background: url('../../src/assets/images/mung_beans.jpg');
+	background: url('../../src/assets/images/radish.jpeg');
 	}
 	
 .item-2 {
-	background: url('../../src/assets/images/coffee_beans_1.jpg');
+	background: url('../../src/assets/images/pancake.jpg');
 	}
 	
 .item-3 {
-	background: url('../../src/assets/images/grapes.jpg');
+	background: url('../../src/assets/images/caprese.jpg');
 	} 
 		
 .item-1,
 .item-2,
 .item-3 {
 	background-size: cover;
-	background-position: 50% 50%;
+	background-position: cover;
 	}
-
-.featured-product > img,
-.featured-product > a > img {
-	height: 150px;
-}
-
-.featured-product h3 {
-	color: #dd845a;
-	font-size: 18px;
-	}
-
-.featured-product .price {
-	color: #dd845a;
-	font-size: 18px;
-	}
-	
-.featured-product .price s {
-	color: #999;
-	font-size: 18px;
-	}
-	
 
 .footer-info {
-    padding: 20px 0;
+    padding: 10px 0;
     background: #f7f7f7;
 }
 
@@ -118,12 +97,12 @@ h6 {
 	}
     
 .footer-info-item {
-    padding: 0px 20px;
+    padding: 0px;
     }
     
 footer .small-print {
 	background-color: #fff;
-	padding: 30px 0;
+	padding: 10px 0;
 	text-align: center;
 }
 
