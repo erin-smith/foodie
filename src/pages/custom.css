@@ -20,6 +20,14 @@ h6 {
 	color: white;
 	text-shadow: 1px 1px 8px black;
 	}
+
+  #explore {
+    background-position:center;
+    background-size:cover;
+    background-color:gray;
+    color: white;
+    text-shadow: 1px 1px 8px black;
+  }
 	
 .promo, .footer-map {
 	border-width: 1px;
@@ -66,19 +74,25 @@ h6 {
 	
 .item-2 {
 	background: url('../../src/assets/images/pancake.jpg');
-  background-size: 50%;
+  background-size: 40%;
 	}
 	
 .item-3 {
 	background: url('../../src/assets/images/caprese.jpg');
-  background-size: 50%;
+  background-size: 40%;
 	} 
+
+.item-4 {
+    background: url('../../src/assets/images/nigiri.jpeg');
+    background-size: 40%;
+    } 
 		
 .item-1,
 .item-2,
-.item-3 {
+.item-3,
+.item-4{
 	background-size:cover;
-	background-position:center ;
+	background-position:center;
 	}
 
 .footer-info {

@@ -1,14 +1,12 @@
 import React from 'react';
-import equalizer from "../../assets/fonts/style.css";
-import "../../App.css"
-import "../../pages/custom.css"
+import cutlery from "../../assets/fonts/style.css";
 
 function Jumbotron(){
 return(
-<div className="jumbotron feature">
+<div className="jumbotron feature" id="feature">
     <div className="container">
-        <h1><span className="glyphicon glyphicon-equalizer" src={equalizer}/>Food Culture & Restaurant Finder!</h1>
-        <p>An Ode to Chefs & Restaurants that both instill joy in your palate, and elevate or transform food culture in the U.S. </p>
+        <h1><span className="glyphicon glyphicon-cutlery" src={cutlery}/> &nbsp; Food Culture & Restaurant Finder!</h1>
+        <p>An Ode to Chefs & Restaurants that instill joy in your palate & elevate food culture in the U.S. </p>
     </div>
 </div>
 )
