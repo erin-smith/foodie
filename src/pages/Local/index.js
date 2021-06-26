@@ -1,13 +1,11 @@
 import Card from "../../components/Card";
-import Header from "../../components/Header";
 import pizza from "../../assets/fonts/style.css"
 
 
 function Local (){ 
-
+return(
 <>
-<Header/>
-    <div className="jumbotron" id="explore">
+    <div className="jumbotron" id="local">
     <div className="container-fluid">
     <div class="row">
         <div class="col-md-4 promo-item item-4"></div>
@@ -21,7 +19,7 @@ function Local (){
     
 <Card/>
 </>
-
+)
 }
 
 export default Local;

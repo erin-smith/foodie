@@ -11,11 +11,7 @@ CREATE TABLE chefs (
     PRIMARY KEY(id)
 );
 
-DROP DATABASE if exists locals_db;
-CREATE DATABASE locals_db;
-USE locals_db;
-
-CREATE TABLE local (
+CREATE TABLE locals (
   id int AUTO_INCREMENT,
   name varchar(125) NOT NULL,
   awards varchar(125),

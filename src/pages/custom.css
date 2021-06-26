@@ -21,7 +21,7 @@ h6 {
 	text-shadow: 1px 1px 8px black;
 	}
 
-  #explore {
+  #local {
     background-position:center;
     background-size:cover;
     background-color:gray;
@@ -73,7 +73,7 @@ h6 {
 	}
 	
 .item-2 {
-	background: url('../../src/assets/images/pancake.jpg');
+	background: url('../../src/assets/images/heart.jpg');
   background-size: 40%;
 	}
 	
@@ -86,11 +86,24 @@ h6 {
     background: url('../../src/assets/images/nigiri.jpeg');
     background-size: 40%;
     } 
+.item-5 {
+      background: url('../../src/assets/images/wing.jpeg');
+      background-size: 40%;
+      } 
+.item-6 {
+        background: url('../../src/assets/images/maiTai.jpg');
+        background-size: 110%;
+        
+
+        } 
 		
 .item-1,
 .item-2,
 .item-3,
-.item-4{
+.item-4,
+.item-5,
+.item-6
+{
 	background-size:cover;
 	background-position:center;
 	}

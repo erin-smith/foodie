@@ -1,5 +1,6 @@
 .myForm > * {
     font: 1.4em 'Unkempt', sans-serif; 
+    align-items: center;
    }
    .myForm {
      display: grid;

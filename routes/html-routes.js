@@ -7,22 +7,22 @@ const path = require("path");
 module.exports = function (app) {
 
   app.get("/", function (req, res) {
-        res.render("Home");
+    res.sendFile(path.join(__dirname, "../../src/pages/Home"));
   });
 
-  app.get("/Transformative", function (req, res) {
-    res.render("Transformative");
+  app.get("/transformative", function (req, res) {
+    res.sendFile(path.join(__dirname, "../../src/pages/Transformative"));
   });
 
-  app.get("/Local", function (req, res) {
-    res.render("Local");
+  app.get("/local", function (req, res) {
+    res.sendFile(path.join(__dirname, "../../src/pages/Local"));
   });
 
-  app.get("/Explore", function (req, res) {
-    res.render("Explore");
+  app.get("/explore", function (req, res) {
+    res.sendFile(path.join(__dirname, "../../src/pages/Explore"));
   });
 
-  app.get("/Suggest", function (req, res) {
-    res.render("Suggest");
+  app.get("/suggest", function (req, res) {
+    res.sendFile(path.join(__dirname, "../../pages/Suggest"));
   });
 };

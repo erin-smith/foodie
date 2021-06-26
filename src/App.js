@@ -1,35 +1,35 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Local from './pages/Local';
 import Home from './pages/Home';
 import Transformative from './pages/Transformative';
 import Suggest from './pages/Suggest';
 import Explore from './pages/Explore';
 import Error from './pages/Error';
-import { StoreProvider } from "./utils/globalState";
 
 
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Home/>
-        <StoreProvider>
-          <Switch>
-            <Route path="/" exact component={Home}/>
-            <Route path="/explore" exact component={Explore}/>
-            <Route path="/suggest" exact component={Suggest}/>
-            <Route path="/transformative" exact component={Transformative}/>
-            <Route path="/local" exact component={Local} />
+      <BrowserRouter basename={process.env.PUBLIC_URL + '/'}>
+        {console.log (`process.env.PUBLIC_URL: ${process.env.PUBLIC_URL + '/foodie'}`)}
+        <div>
+          <Header/>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/explore" component={Explore}/>
+            <Route exact path="/suggest" component={Suggest}/>
+            <Route exact path="/transformative" component={Transformative}/>
+            <Route exact path="/local"  component={Local} />
             {/* <Route path="/about" exact component={About}/>
-            <Route path="/privacy" exact component={Privacy}/>
+            <Route path="/privacy" exact component={Credits}/>
             <Route path="/contact" exact component={Contact}/> */}
             <Route path="/error" exact component={Error}/>
-          </Switch>
-        </StoreProvider>
+            <Footer/>
+            </div>
       </BrowserRouter>
-      </div>
+ 
   )
 };
 

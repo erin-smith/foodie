@@ -30,6 +30,16 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link
+                to="/transformative"
+                className={
+                  location.pathname === "/transformative" ? "nav-link active" : "nav-link"
+                }
+              >
+                Transformative
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
                 to="/explore"
                 className={
                   location.pathname === "/explore" ? "nav-link active" : "nav-link"

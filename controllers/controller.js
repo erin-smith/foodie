@@ -1,37 +1,37 @@
 //import express and the Chefs models to use database functions
 const express = require("express");
-const chef = require("../models/chef.js");
-const chef = require("../models/index.js");
-const local = require("../models/local.js");
-const local = require("../models/index.js");
+const chefs = require("../models/chef.js");
+const chefs = require("../models/index.js");
+const locals = require("../models/local.js");
+const locals = require("../models/index.js");
 const router = express.Router();
 
 
 // route for selecting all entries (this still needs loads of work to be done)
 router.get("/", (req, res) => {
-    chef.selectAll((data) => {
-        let chef = data.map(({ name, awards, restaurants, city }) => ({
+    chefs.selectAll((data) => {
+        let chefs = data.map(({ name, awards, restaurants, city }) => ({
             name: name,
             awards: awards,
             restaurants: restaurants,
             city:city
         }));
 
-        let chefObject = { chef: chef};
+        let chefObject = { chefs: chefs};
         res.render("index", chefObject);
     });
 });
 
 router.get("/", (req, res) => {
-    local.selectAll((data) => {
-        let local = data.map(({ name, awards, restaurants, city }) => ({
+    locals.selectAll((data) => {
+        let locals = data.map(({ name, awards, restaurants, city }) => ({
             name: name,
             awards: awards,
             restaurants: restaurants,
             city:city
         }));
 
-        let localObject = { local: local};
+        let localObject = { locals: locals};
         res.render("index", localObject);
     });
 });

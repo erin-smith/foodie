@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-        let local = sequelize.define("local",{
+        let locals = sequelize.define("locals",{
                 place_id: {
                   type: DataTypes.STRING,
                   unique: true
@@ -22,5 +22,5 @@ module.exports = function (sequelize, DataTypes) {
                 }
               });
             
-              return local;
+              return locals;
             };

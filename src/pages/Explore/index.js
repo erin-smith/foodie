@@ -1,5 +1,4 @@
 import React, {useRef} from "react";
-import Header from "../../components/Header";
 import search from "../../assets/fonts/style.css"
 import "../../pages/custom.css"
 
@@ -21,11 +20,10 @@ function Explore (props) {
 
   return (
     <>
-    <Header/>
     <div className="jumbotron" id="explore">
     <div className="container-fluid">
     <div class="row">
-        <div class="col-md-4 promo-item item-4"></div>
+        <div class="col-md-4 promo-item item-5"></div>
         <div class="col-md-8">
         <h1><span className="glyphicon glyphicon-search" src={search}/> &nbsp; Find Your New Favorite Places & Chefs!</h1>
         <p>“But once in a while you might see me at In and Out Burger; they make the best fast food hamburgers around. --Thomas Keller”</p>
