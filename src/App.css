@@ -1514,13 +1514,13 @@ html {
   .table-hover > tbody > tr:hover {
     background-color: #f5f5f5;
   }
-  table col[class*="col-"] {
+  table col[className*="col-"] {
     position: static;
     display: table-column;
     float: none;
   }
-  table td[class*="col-"],
-  table th[class*="col-"] {
+  table td[className*="col-"],
+  table th[className*="col-"] {
     position: static;
     display: table-cell;
     float: none;
@@ -3059,7 +3059,7 @@ html {
     display: table;
     border-collapse: separate;
   }
-  .input-group[class*="col-"] {
+  .input-group[className*="col-"] {
     float: none;
     padding-right: 0;
     padding-left: 0;

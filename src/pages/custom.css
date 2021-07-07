@@ -13,7 +13,7 @@ h6 {
 	}
 	
 .feature {
-	background: url('../../src/assets/images/burger1.jpg');
+	background: url('../../src/assets/images/burger.jpg');
 	background-position:center;
 	background-size:cover;
 	background-color: #dd845a;
@@ -21,7 +21,7 @@ h6 {
 	text-shadow: 1px 1px 8px black;
 	}
 
-  #local {
+  #local, #explore, #transform {
     background-position:center;
     background-size:cover;
     background-color:gray;
@@ -78,24 +78,33 @@ h6 {
 	}
 	
 .item-3 {
-	background: url('../../src/assets/images/caprese.jpg');
-  background-size: 40%;
+	background: url('../../src/assets/images/scallop.jpg');
+  background-size: 30%;
 	} 
 
 .item-4 {
+    background: url('../../src/assets/images/cake.jpg');
+    background-size: 40%;
+    background-position: top;
+    background-size: cover;
+    } 
+
+.item-5 {
     background: url('../../src/assets/images/nigiri.jpeg');
     background-size: 40%;
     } 
-.item-5 {
-      background: url('../../src/assets/images/wing.jpeg');
-      background-size: 40%;
-      } 
 .item-6 {
-        background: url('../../src/assets/images/maiTai.jpg');
-        background-size: 110%;
-        
-
+      background: url('../../src/assets/images/wing.jpeg');
+      background-size: 60%;
+      } 
+.item-7 {
+        background: url('../../src/assets/images/quail.jpg');
+        background-size: cover;
+        background-position: bottom;
+       
         } 
+
+
 		
 .item-1,
 .item-2,
@@ -139,7 +148,7 @@ footer .small-print {
 
 /*
 *************************** 
-Override Bootstrap Classes 
+Override Bootstrap classNamees 
 ***************************
 */
 

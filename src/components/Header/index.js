@@ -40,6 +40,16 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link
+                to="/local"
+                className={
+                  location.pathname === "/local" ? "nav-link active" : "nav-link"
+                }
+              >
+                Local
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
                 to="/explore"
                 className={
                   location.pathname === "/explore" ? "nav-link active" : "nav-link"

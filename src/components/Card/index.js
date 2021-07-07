@@ -1,14 +1,18 @@
 import React from 'react';
 
 
-function Card (){
-    return(
-    <div className="card">
-  <div className="card-body">
-    This is some text within a card body.
-  </div>
-</div>
-    )
+function Card ({ title, children }){
+  return (
+    <div className="card mt-4">
+      <div className="card-header">
+        <h3>
+          <strong> {title}
+          </strong>
+        </h3>
+      </div>
+      <div className="card-body">{children}</div>
+    </div>
+  );
 }
 
 export default Card;

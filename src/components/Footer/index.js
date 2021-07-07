@@ -6,10 +6,10 @@ function Footer() {
 
   return (
     <footer>
-      <div class="footer-info">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 footer-info-item">
+      <div className="footer-info">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-4 footer-info-item">
               <Link
                 to="/about"
                 className={
@@ -21,7 +21,7 @@ function Footer() {
                 <h3>About</h3>
               </Link>
             </div>
-            <div class="col-sm-4 footer-info-item">
+            <div className="col-sm-4 footer-info-item">
               <Link
                 to="/privacy"
                 className={
@@ -33,7 +33,7 @@ function Footer() {
                 <h3>Privacy</h3>
               </Link>
             </div>
-            <div class="col-sm-4 footer-info-item">
+            <div className="col-sm-4 footer-info-item">
               <Link
                 to="/contact"
                 className={
@@ -43,7 +43,7 @@ function Footer() {
                 }
               >
                 <h3>
-                  <span class="glyphicon glyphicon-list-alt"></span>
+                  <span className="glyphicon glyphicon-list-alt"></span>
                   Contact Us{" "}
                 </h3>
               </Link>

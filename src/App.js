@@ -7,14 +7,14 @@ import Home from './pages/Home';
 import Transformative from './pages/Transformative';
 import Suggest from './pages/Suggest';
 import Explore from './pages/Explore';
-import Error from './pages/Error';
+// import Error from './pages/Error';
 
 
 
 function App() {
   return (
       <BrowserRouter basename={process.env.PUBLIC_URL + '/'}>
-        {console.log (`process.env.PUBLIC_URL: ${process.env.PUBLIC_URL + '/foodie'}`)}
+        {console.log (`process.env.PUBLIC_URL: ${process.env.PUBLIC_URL + '/'}`)}
         <div>
           <Header/>
             <Route exact path="/" component={Home}/>
@@ -25,7 +25,7 @@ function App() {
             {/* <Route path="/about" exact component={About}/>
             <Route path="/privacy" exact component={Credits}/>
             <Route path="/contact" exact component={Contact}/> */}
-            <Route path="/error" exact component={Error}/>
+            {/* <Route component={Error}/> */}
             <Footer/>
             </div>
       </BrowserRouter>

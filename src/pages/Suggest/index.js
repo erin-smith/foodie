@@ -3,7 +3,7 @@ import glass from "../../assets/fonts/style.css";
 import "./style.css"
 
 function Suggest(props){
-// const suggest = document.getElementsByClassName("myForm");
+// const suggest = document.getElementsByclassName("myForm");
 
 //   function handleFormSubmit(e) {
 //     e.preventDefault();
@@ -20,18 +20,18 @@ return(
   <>
   <div className="jumbotron" id="explore">
   <div className="container-fluid">
-  <div class="row">
-      <div class="col-md-4 promo-item item-6"></div>
-      <div class="col-md-8">
+  <div className="row">
+      <div className="col-md-4 promo-item item-7"></div>
+      <div className="col-md-8">
       <h1><span className="glyphicon glyphicon-glass" src={glass}/> Suggest a new Restaurant or Update!</h1>
       <p>“But once in a while you might see me at In and Out Burger; they make the best fast food hamburgers around. --Thomas Keller”</p>
       </div>
   </div>
   </div>
   </div>
-  <div class="row">
-    <div class= "col-md 4"/>
-    <div class= "col-md 4">
+  <div className="row">
+    <div className= "col-md 4"/>
+    <div className= "col-md 4">
 <form className="myForm m-1">
   <label htmlfor="customer_name">Chef Name </label>
   <input type="text" name="chef_name" id="chef_name" required/>
@@ -60,7 +60,7 @@ return(
   <button  type="submit">Submit Suggestion</button>
 </form>
 </div>
-<div class= "col-md 4"/>
+<div className= "col-md 4"/>
 </div>
 </>
 )

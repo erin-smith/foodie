@@ -12,6 +12,8 @@ app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
+const routes = require("./controllers/controller.js");
+app.use(routes);
 
 
 if (process.env.NODE_ENV === "production") {
