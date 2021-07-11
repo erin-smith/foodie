@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
-let chefs = sequelize.define("chefs",{
-        place_id: {
+const chefs = sequelize.define("chefs",{
+        id: {
           type: DataTypes.STRING,
           unique: true
         },

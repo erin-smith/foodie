@@ -3,8 +3,8 @@ const express = require('express');
 const compression = require('compression');
 
 // Setting up port and requiring models
-const PORT = process.env.PORT || 3001;
-const db = require('./models');
+const PORT = process.env.PORT || 3000;
+const db = require("./models");
 
 // EXPRESS
 const app = express();
@@ -27,6 +27,6 @@ require('./routes/html-routes.js')(app);
 // Sync database with sequelize
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
-    console.log('==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.', PORT, PORT);
+    console.log('Listening on port %s. Visit http://localhost:%s/ in your browser.', PORT, PORT);
   });
 });

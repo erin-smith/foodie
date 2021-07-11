@@ -59,7 +59,9 @@ Object.keys(db).forEach((modelName) => {
     db[modelName].associate(db);
   }
 });
-
+db.Sequelize = Sequelize;
 db.sequelize = sequelize;
+
+db.chefs = require("../models/chef.js");
 
 module.exports = db;

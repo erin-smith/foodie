@@ -20,7 +20,7 @@ const REACT_APP_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 
  const response = await fetch(fourSquare_API + REACT_APP_CLIENT_ID + "&v=" + v + "&categoryId=4bf58dd8d48988d1c4941735&radius=5000&near="+ searchTerm + "&section=food&limit=15");
  const data = await response.json();
- console.log (data, "HONZA");
+ console.log(data, "HONZA");
 };
 
 

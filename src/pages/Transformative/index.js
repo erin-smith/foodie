@@ -1,11 +1,20 @@
+import Axios from "axios";
+import React, {useState} from "react";
 import star from "../../assets/fonts/style.css";
-import Card from "../../components/Card";
+import {Card} from "../../components/Card";
 
 
 function Transformative(){
 
+const [chefs, setChefs] = useState([]);
+
+const getChefs = () => {
+  Axios.get("http://localhost:3000/transformative").then((response) => {
+    setChefs(response.data);
+  })
+}
     return(
-     <>
+     <div>
     <div className="jumbotron" id="transform">
     <div className="container-fluid">
     <div className="row">
@@ -17,10 +26,22 @@ function Transformative(){
     </div>
     </div>
     </div>
-<Card>
-</Card>
-</>
-)
+<Card
+value={getChefs}>
+{chefs.map((chef, key) => {
+  return(
+  <ul className="chef">
+      <li>Chef: {chef.name}</li>
+      <li>Awards: {chef.awards}</li>
+      <li>Restaurants: {chef.restaurants}</li>
+      <li>Location: {chef.city}</li>
+  </ul>
+  );
+})}
+ </Card> 
+</div>
+    )   
 }
+
 
 export default Transformative;

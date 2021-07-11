@@ -1,12 +1,12 @@
 //import express and the Chefs models to use database functions
 const express = require("express");
-const chefs = require("../models/chef.js");
-const chefs = require("../models/index.js");
-const locals = require("../models/local.js");
-const locals = require("../models/index.js");
+const db = require("../models");
+const chefs = db.chef; 
+const locals = db.local;
+
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/transformative", (req, res) => {
     chefs.selectAll((data) => {
         let chefs = data.map(({ name, awards, restaurants, city }) => ({
             name: name,
@@ -21,7 +21,7 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/", (req, res) => {
+router.get("/local", (req, res) => {
     locals.selectAll((data) => {
         let locals = data.map(({ name, awards, restaurants, city }) => ({
             name: name,

@@ -1,8 +1,11 @@
-import Card from "../../components/Card";
+import {React, useState} from "react";
+import {Card} from "../../components/Card";
 import leaf from "../../assets/fonts/style.css"
+import Locals from "../../components/Locals";
 
 
 function Local (){ 
+    const [locals, setLocals]= useState ([]);
 return(
 <>
     <div className="jumbotron" id="local">
@@ -11,13 +14,22 @@ return(
         <div className="col-md-4 promo-item item-5"></div>
         <div className="col-md-8">
         <h1><span className="glyphicon glyphicon-leaf" src={leaf}/> San Diego Local Favorite Hot Spots </h1>
-        <p>"You don't need a silver fork to eat good food. -Paul Prudhomme"</p>
+        <p>"You don't need a silver fork to eat good food. --Paul Prudhomme"</p>
         </div>
     </div>
     </div>
     </div>
     
-<Card href="/locals">
+<Card>
+    <ul>
+        {locals.map(chef => {
+            return (
+                <li key={chef.id}>
+                    <Locals {...chef}/>
+                </li>
+            )
+        })}
+    </ul>
 </Card>
 </>
 )

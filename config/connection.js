@@ -1,3 +1,4 @@
+
 // Set up MySQL  and connect it to Node!
 const mysql = require("mysql");
 const config = require(__dirname + '/../config/config.json');
