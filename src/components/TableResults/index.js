@@ -1,96 +1,72 @@
-import {React, useState, useEffect} from "react";
+import React, {Component} from "react";
 import { Container, Row, Col } from "../Grid";
-import {loadPlaces} from "../../utils/fourSquare.js";
-import "../../pages/custom.css";;
+import { Venue } from "../Venue";
+import {Search} from "../Search";
+import "../../pages/custom.css";
 
-function TableResults() {
 
-  const [error, setError]= useState(null);
-  const [isLoaded, setIsLoaded]= useState(false);
-  const [response, setResponse]= useState([]);
+class TableResults extends Component {
 
-useEffect(() => {
-   loadPlaces()
-   .then(
-     (result) => {
-       setIsLoaded(true);
-       setResponse(result);
-       },
+  constructor (){
+    super();
+    this.state = {
+      venues:[]
+    };
+  }
 
-     (error)=> {
-       setIsLoaded(true);
-       setError(error);
-       }
-       )
-     }, [])
-   
-  // const handleInputChange = event => {
-  //   const { value } = event.target;
-  //   setState(value);
-  // };
+  handleSubmit(query) {
+    this.getVenues(query);
+  }
 
- function handleFormSubmit(e) {
-    const places = document.getElementById("place").value.trim();
-    e.preventDefault();
-    console.log("Button was clicked and the query is", places);
-    if (places.length === 0){
-      alert ("Please enter a City, State or Restaurant Name");
-      return;
-    }
-    if (places === null){
-      console.log("null");
-      return;
-    }
-   loadPlaces(places);
-  };
+  componentDidMount(){
+    this.getVenues('San Diego, CA');
+  }
 
-if(error) {
-  return <div>Error: {error.message}</div>;
-} else if (!isLoaded) {
-  return <div>Loading...</div>;
-} else{
+  getVenues(query){
+    let setVenueState = this.setState.bind(this);
+    const fourSquare_API = "https://api.foursquare.com/v2/venues/explore?&client_id=";
+    const REACT_APP_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+    function formatDate(date) {
+      var d = new Date(date),
+          month = '' + (d.getMonth() + 1),
+          day = '' + d.getDate(),
+          year = d.getFullYear();
+  
+      if (month.length < 2) 
+          month = '0' + month;
+      if (day.length < 2) 
+          day = '0' + day;
+  
+      return [year, month, day].join('');
+  }
+  const v = formatDate(Date.now())
+    fetch(fourSquare_API + REACT_APP_CLIENT_ID + "&v=" + v + "&categoryId=4bf58dd8d48988d1c4941735&radius=5000&near="+ query + "&section=food&limit=15")
+   .then(response => response.json())
+   .then(response => {
+     setVenueState({venues: response.response.groups[0].items});
+   });
+  }
+     
+render(){
+  let venueList = this.state.venues.map((item, i)=>
+    <Venue key={i} name={item.venue.name}/>
+  // let addressList = this.state.venues.map((item, i)=>  
+    // <Address key={i} Address={item.venue.location.formattedAddress}/>
+  
+  
+    );
+
   return (
-    <>
-    <form className="search">
-      <div className="form-group">
-        <label htmlFor="Query">
-          <strong>Restaurant or City, State</strong>
-        </label>
-        <input
-          className="form-control"
-          type="text"
-          // onChange={handleInputChange}
-          placeholder="San Diego, CA"
-          name="RestaurantSearch"
-          required
-          id= "place"
-        />
-      </div>
-      <div className="pull-right">
-        <button
-         onClick={handleFormSubmit}
-          type="submit"
-          className="btn btn-lg btn-info float-right"
-          id="orgBtn"
-        >
-          Search
-        </button>
-      </div>
-    </form>
     <Container>
     <Row className="flex-wrap-reverse">
     <Col size="xs-12">
+    <Search onSubmit={(value)=>this.handleSubmit(value)}/>
       <ul>
-        {/* {response.groups[0].items.map(response => ( */}
-          {/* <li key={response.id}>
-          {response.venue.name}{response.venue.location.formattedAddress}{response.venue.photos.groups[0]}
-          </li>
-        ))} */}
+        {venueList}
       </ul>
     </Col>
     </Row>
     </Container>
-    </>
   )
 }
 }

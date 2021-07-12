@@ -1,11 +1,10 @@
 import React from "react";
 import TableResults from "../../components/TableResults";
 import search from "../../assets/fonts/style.css";
-import "../../pages/custom.css";;
+import "../../pages/custom.css";
+;
 
-
-function Explore(){
-
+function Explore (){
   return (
     <>
     <div className="jumbotron" id="explore">
@@ -21,7 +20,7 @@ function Explore(){
     </div>
     <TableResults/>
     </>
-  )
+  );
 }
 
 
