@@ -10,6 +10,8 @@ class TableResults extends Component {
   constructor (){
     super();
     this.state = {
+      error: null,
+      isLoaded: false,
       venues:[]
     };
   }
@@ -42,25 +44,45 @@ class TableResults extends Component {
   const v = formatDate(Date.now())
     fetch(fourSquare_API + REACT_APP_CLIENT_ID + "&v=" + v + "&categoryId=4bf58dd8d48988d1c4941735&radius=5000&near="+ query + "&section=food&limit=15")
    .then(response => response.json())
-   .then(response => {
-     setVenueState({venues: response.response.groups[0].items});
-   });
-  }
+   .then(
+     (response) => {
+       console.log("4square response", response);
+       if(response.meta.code === 400){
+        alert("Location not found, Please seach again")
+        return
+       }
+     setVenueState({venues: response.response.groups[0].items,
+      isLoaded: true
+    })
+      },
+  (error) => {
+      this.setVenueState({
+        isLoaded: true,
+        error
+      });
+   }
+  )
+}
      
 render(){
+  const { error, isLoaded} = this.state;
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  } else if (!isLoaded) {
+    return <div>Loading...</div>;
+  } else {
   let venueList = this.state.venues.map((item, i)=>
     <Venue key={i} name={item.venue.name}/>
   // let addressList = this.state.venues.map((item, i)=>  
     // <Address key={i} Address={item.venue.location.formattedAddress}/>
-  
-  
     );
-
+  
   return (
     <Container>
     <Row className="flex-wrap-reverse">
     <Col size="xs-12">
     <Search onSubmit={(value)=>this.handleSubmit(value)}/>
+    <h4> <i>FourSquare</i> Recommended Restaurants</h4>
       <ul>
         {venueList}
       </ul>
@@ -70,5 +92,5 @@ render(){
   )
 }
 }
-
+}
   export default TableResults;

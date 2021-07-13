@@ -23,7 +23,7 @@ export class Search extends Component {
         <form className="search" onSubmit={this.handleSubmit}>
       <div className="form-group">
         <label htmlFor="Query">
-          <strong>Restaurant or City, State</strong>
+          <strong>Search for a City, State</strong>
         </label>
         <input
           className="form-control"
