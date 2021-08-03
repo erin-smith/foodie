@@ -1,18 +1,23 @@
+// // Set up MySQL  and connect it to Node!
+const  {Sequelize} = require("sequelize");
+const env = process.env.NODE_ENV || 'development';
+const config = require(__dirname + '/config.json')[env];
 
-// Set up MySQL  and connect it to Node!
-const mysql = require("mysql");
-const config = require(__dirname + '/../config/config.json');
 
-const connection = mysql.createConnection(config.development);
+let sequelize;
+if (config.use_env_variable) {
+  sequelize = new Sequelize(process.env[config.use_env_variable], config);
+} else {
+  sequelize = new Sequelize(config.database, config.username, config.password, config);
+}
+
 
 // Makes a connection.
-connection.connect((err)=> {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-});
+try {
+ sequelize.authenticate();
+  console.log('Connection has been established successfully.');
+} catch (error) {
+  console.error('Unable to connect to the database:', error);
+}
 
-// Exports connection for ORM.
-module.exports = connection;
+module.exports = sequelize;

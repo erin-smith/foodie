@@ -56,10 +56,11 @@ class TableResults extends Component {
     })
       },
   (error) => {
-      this.setVenueState({
-        isLoaded: true,
-        error
-      });
+      // this.setVenueState({
+      //   isLoaded: true,
+      //   error
+      console.log(error)
+      // });
    }
   )
 }

@@ -1,18 +1,24 @@
-import Axios from "axios";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import star from "../../assets/fonts/style.css";
-import {Card} from "../../components/Card";
-
+import Card from "../../components/Card";
+import { List, ListItem } from "../../components/List";
+import API from "../../utils/API";
 
 function Transformative(){
 
-const [chefs, setChefs] = useState([]);
+const [chefList, setChefList] = useState([])
 
-const getChefs = () => {
-  Axios.get("http://localhost:3000/transformative").then((response) => {
-    setChefs(response.data);
-  })
-}
+useEffect(() => {
+  loadChefs()
+}, []);
+
+function loadChefs() {
+API.getChefs()
+   .then(response => 
+     setChefList(response.data)
+   )
+  .catch(err => console.log(err));
+};
     return(
      <div>
     <div className="jumbotron" id="transform">
@@ -26,19 +32,25 @@ const getChefs = () => {
     </div>
     </div>
     </div>
-<Card
-value={getChefs}>
-{chefs.map((chef, key) => {
+    {chefList.length ? (
+<Card>
+  <List>
+{chefList.map(chef => {
   return(
-  <ul className="chef">
+  <ListItem key={chef._id}>
+    {/* <a href={"/transformative" + chef._id}></a> */}
       <li>Chef: {chef.name}</li>
       <li>Awards: {chef.awards}</li>
       <li>Restaurants: {chef.restaurants}</li>
       <li>Location: {chef.city}</li>
-  </ul>
+  </ListItem>
   );
 })}
+</List>
  </Card> 
+    ) : (
+      <h3>No Results to Display</h3>
+  )}
 </div>
     )   
 }

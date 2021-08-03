@@ -1,7 +1,7 @@
 import React from "react";
 import TableResults from "../../components/TableResults";
 import search from "../../assets/fonts/style.css";
-import "../../pages/custom.css";
+import "../custom.css";
 ;
 
 function Explore (){

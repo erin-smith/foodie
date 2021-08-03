@@ -2,7 +2,8 @@ import React from "react";
 import glass from "../../assets/fonts/style.css";
 import "./style.css"
 
-function Suggest(props){
+function Suggest(){
+
 // const suggest = document.getElementsByclassName("myForm");
 
 //   function handleFormSubmit(e) {
@@ -37,7 +38,7 @@ return(
   <label htmlFor="customer_name">Chef Name </label>
   <input type="text" name="chef_name" id="chef_name" required/>
   <label htmlFor="phone_number">Restaurant </label>
-  <input type="text" name="venue_name" id="venue_number"/>
+  <input type="text" name="venue_name" id="venue_number" />
   <label htmlFor="location">City, State</label>
   <input type="text" name="city_state" id="city_state"/>
   <fieldset>

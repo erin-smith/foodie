@@ -3,7 +3,7 @@ CREATE DATABASE chefs_db;
 USE chefs_db;
 
 CREATE TABLE chefs (
-	id int AUTO_INCREMENT,
+	id int NOT NULL AUTO_INCREMENT,
     name varchar(30) NOT NULL,
     awards varchar(60) NOT NULL,
     restaurants varchar(255) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE chefs (
 );
 
 CREATE TABLE locals (
-  id int AUTO_INCREMENT,
+  id int  NOT NULL AUTO_INCREMENT,
   name varchar(125) NOT NULL,
   awards varchar(125),
   restaurants varchar(255) NOT NULL,

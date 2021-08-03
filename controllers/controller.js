@@ -1,41 +1,23 @@
-//import express and the Chefs models to use database functions
-const express = require("express");
-const db = require("../models");
-const chefs = db.chef; 
-const locals = db.local;
+const chefs = require('../models/chefs');
+const locals = require('../models/locals');
+const db = require('../models/index');
 
-const router = express.Router();
 
-router.get("/transformative", (req, res) => {
-    chefs.selectAll((data) => {
-        let chefs = data.map(({ name, awards, restaurants, city }) => ({
-            name: name,
-            awards: awards,
-            restaurants: restaurants,
-            city:city
-        }));
-
-        let chefObject = { chefs: chefs};
-        console.log(chefObject);
-        res.render("index", chefObject);
-    });
-});
-
-router.get("/local", (req, res) => {
-    locals.selectAll((data) => {
-        let locals = data.map(({ name, awards, restaurants, city }) => ({
-            name: name,
-            awards: awards,
-            restaurants: restaurants,
-            city:city
-        }));
-
-        let localObject = { locals: locals};
-        res.render("index", localObject);
-    });
-})
-
+module.exports =  {
   
+    // GET route for getting all of the chefs
+    findAllChefs: function(req, res) {
+      db.chefs.findAll({})
+      .then(chefs => res.json(chefs))
+      .catch(err => res.status(422).json(err));
+        // results are available to us inside the .then
+      },
 
-// export routes for server.js to use.
-module.exports = router;
+      findAllLocals: function(req, res) {
+      db.locals.findAll({})
+      .then(locals => res.json(locals))
+      .catch(err => res.status(422).json(err));
+        // results are available to us inside the .then
+      }
+  
+}    
