@@ -1,24 +1,26 @@
 import React, {useState, useEffect} from "react";
 import star from "../../assets/fonts/style.css";
 import Card from "../../components/Card";
-import { List, ListItem } from "../../components/List";
-import API from "../../utils/API";
 
-function Transformative(){
+function Transformative (){
 
 const [chefList, setChefList] = useState([])
+
+const loadChefs = async () => {
+  try {
+    const response = await fetch("/api/chefs")
+    console.log(response, "Here")
+    const jsonData = await response.json()
+    setChefList(jsonData);
+  } catch (err) {
+    console.error(err.message);
+  }
+};
 
 useEffect(() => {
   loadChefs()
 }, []);
 
-function loadChefs() {
-API.getChefs()
-   .then(response => 
-     setChefList(response.data)
-   )
-  .catch(err => console.log(err));
-};
     return(
      <div>
     <div className="jumbotron" id="transform">
@@ -32,27 +34,34 @@ API.getChefs()
     </div>
     </div>
     </div>
-    {chefList.length ? (
-<Card>
-  <List>
-{chefList.map(chef => {
-  return(
-  <ListItem key={chef._id}>
-    {/* <a href={"/transformative" + chef._id}></a> */}
-      <li>Chef: {chef.name}</li>
-      <li>Awards: {chef.awards}</li>
-      <li>Restaurants: {chef.restaurants}</li>
-      <li>Location: {chef.city}</li>
-  </ListItem>
-  );
-})}
-</List>
- </Card> 
-    ) : (
-      <h3>No Results to Display</h3>
-  )}
+    {/* {chefList.length ? ( */}
+     <Card>
+     <table className="table table-striped mt-5 text-center">
+   <thead>
+     <tr>
+       <th scope="col">Chef</th>
+       <th scope="col">Awards</th>
+       <th scope="col">Restaurants</th>
+       <th scope="col">Location</th>
+     </tr>
+   </thead>
+     <tbody>
+     {chefList.map(chefs => 
+       <tr>
+         <td>{chefs.name}</td>
+         <td>{chefs.awards}</td>
+         <td>{chefs.restaurants}</td>
+         <td>{chefs.city}</td>
+       </tr>
+     )}
+   </tbody>
+   </table>
+  </Card> 
+  {/* //   ) : (
+  //     <h3>No Results to Display</h3>
+  // )} */}
 </div>
-    )   
+    )  ; 
 }
 
 

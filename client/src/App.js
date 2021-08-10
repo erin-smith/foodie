@@ -20,8 +20,8 @@ function App() {
             <Route exact path="/" component={Home}/>
             <Route exact path="/explore" component={Explore}/>
             <Route exact path="/suggest" component={Suggest}/>
-            <Route exact path="/transformative" component={Transformative}/>
-            <Route exact path="/local"  component={Local} />
+            <Route exact path={"/transformative"} component={Transformative}/>
+            <Route exact path={"/local"}  component={Local} />
             {/* <Route path="/about" exact component={About}/>
             <Route path="/privacy" exact component={Credits}/>
             <Route path="/contact" exact component={Contact}/> */}

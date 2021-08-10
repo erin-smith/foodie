@@ -18,7 +18,12 @@ module.exports = (sequelize, DataTypes) => {
     awards: DataTypes.STRING,
     restaurants: DataTypes.STRING,
     city: DataTypes.STRING
-  }, { sequelize, modelName: 'locals', timestamps: false },
-  );
+  }, {
+    sequelize,
+    modelName: 'locals',
+    timestamps: false,
+    createdAt: false,
+    updatedAt: false
+  });
   return locals;
 };

@@ -34,4 +34,7 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+db.chefs = require("./chefs.js")(sequelize, Sequelize);
+db.locals = require("./locals.js")(sequelize, Sequelize);
+
 module.exports = db;
