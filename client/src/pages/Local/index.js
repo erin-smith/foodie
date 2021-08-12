@@ -1,21 +1,20 @@
-import React, {useEffect, useState} from "react";
-import Card from "../../components/Card";
-// import List from "../../components/List";
-// import API from "../../utils/API";
+import React from "react";
+// import Card from "../../components/Card";
+import LocalList from "../../components/LocalList";
 import leaf from "../../assets/fonts/style.css"
 
 function Local (){ 
-    const [localList, setLocalList] = useState([]);
+    // const [localList, setLocalList] = useState([]);
 
-    const loadLocals = () => {
-        fetch("/api/locals")
-        .then (response => response.json())
-        .then (setLocalList)
-    };
+    // const loadLocals = () => {
+    //     fetch("/api/locals")
+    //     .then (response => response.json())
+    //     .then (setLocalList)
+    // };
 
-    useEffect(() => {
-      loadLocals()
-    }, []);
+    // useEffect(() => {
+    //   loadLocals()
+    // }, []);
 
 return(
 <div>
@@ -31,8 +30,9 @@ return(
     </div>
     </div>
     {/* {locals.length ? ( */}
-<Card>
-    <table className="table table-striped mt-5 text-center">
+<div>
+  <LocalList/>
+    {/* <table className="table table-striped mt-5 text-center">
   <thead>
     <tr>
       <th scope="col">Chef</th>
@@ -42,20 +42,20 @@ return(
     </tr>
   </thead>
     <tbody>
-    {localList.map(local => (
+    {localList.map(locals => (
       <tr>
-        <td key={local.id}>{local.name}</td>
-        <td>{local.awards}</td>
-        <td>{local.restaurants}</td>
-        <td>{local.city}</td>
+        <td key={locals.id}>{locals.name}</td>
+        <td>{locals.awards}</td>
+        <td>{locals.restaurants}</td>
+        <td>{locals.city}</td>
       </tr>
     ))}
   </tbody>
-  </table>
- </Card> 
-    {/* ) : ( */}
-      {/* <h3>No Results to Display</h3>
-  )} */}
+  </table> */}
+ </div> 
+     {/* ) : ( 
+ <h3>No Results to Display</h3>
+ )}  */}
 </div>
     ) ;  
 }

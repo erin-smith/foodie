@@ -32,8 +32,6 @@ if (process.env.NODE_ENV === "production") {
 require('./routes/html-routes.js')(app);
 require('./routes/api-routes.js')(app);
 
-// Send every request to the React app
-// Define any API routes before this runs
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });

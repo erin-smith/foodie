@@ -1,3 +1,16 @@
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  color: #dd845a;
+}
+td {
+  color: #dd845a;
+}
+th {
+  color: #dd845a;
+  padding: 0;
+}
+
 .list-overflow-container {
   max-height: 545px;
   border: 1px #DDDDDD solid;
