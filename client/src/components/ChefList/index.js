@@ -36,16 +36,20 @@ class ChefList extends React.Component {
               </th>
             </tr>
           </thead>
-          <tbody>
-            {this.state.chefs.map((chef) => (
-              <tr>
-                <td>{chef.name}</td>
-                <td>{chef.awards}</td>
-                <td>{chef.restaurants}</td>
-                <td>{chef.city}</td>
-              </tr>
-            ))}
-          </tbody>
+          {chefs.length ? (
+            <tbody>
+              {this.state.chefs.map((chef) => (
+                <tr>
+                  <td>{chef.name}</td>
+                  <td>{chef.awards}</td>
+                  <td>{chef.restaurants}</td>
+                  <td>{chef.city}</td>
+                </tr>
+              ))}
+            </tbody>
+          ) : (
+            <h3>No Results to Display</h3>
+          )}
         </table>
       </div>
     );

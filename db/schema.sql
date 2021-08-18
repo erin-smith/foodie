@@ -1,6 +1,6 @@
-DROP DATABASE if exists chefs_db;
-CREATE DATABASE chefs_db;
-USE chefs_db;
+DROP DATABASE if exists swno5f1qusdd18q5;
+CREATE DATABASE swno5f1qusdd18q5;
+USE swno5f1qusdd18q5;
 
 CREATE TABLE chefs (
 	id int NOT NULL AUTO_INCREMENT,
