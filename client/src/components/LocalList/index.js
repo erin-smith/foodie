@@ -19,33 +19,37 @@ class LocalList extends React.Component {
     const { locals } = this.state;
     return (
       <div>
-        <table className="table table-striped mt-5 text-center">
+        <table className="table table-striped mt-3 text-center">
           <thead>
             <tr>
               <th scope="col" className="text-center">
-                Chef
+                <h3>Chef</h3>
               </th>
               <th scope="col" className="text-center">
-                Awards
+                <h3>Awards</h3>
               </th>
               <th scope="col" className="text-center">
-                Restaurants
+                <h3>Restaurants</h3>
               </th>
               <th scope="col" className="text-center">
-                Location
+                <h3>Location</h3>
               </th>
             </tr>
           </thead>
-          <tbody>
-            {this.state.locals.map((local) => (
-              <tr>
-                <td>{local.name}</td>
-                <td>{local.awards}</td>
-                <td>{local.restaurants}</td>
-                <td>{local.city}</td>
-              </tr>
-            ))}
-          </tbody>
+          {locals.length ? (
+            <tbody>
+              {this.state.locals.map((local) => (
+                <tr>
+                  <td>{local.name}</td>
+                  <td>{local.awards}</td>
+                  <td>{local.restaurants}</td>
+                  <td>{local.city}</td>
+                </tr>
+              ))}
+            </tbody>
+          ) : (
+            <h3>No Results to Display</h3>
+          )}
         </table>
       </div>
     );

@@ -1,6 +1,8 @@
 import React from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron";
+import "../../App.css";
+import "../custom.css";
 
 function Error() {
   return (

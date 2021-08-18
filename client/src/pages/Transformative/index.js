@@ -1,7 +1,9 @@
 import React from "react";
 import star from "../../assets/fonts/style.css";
-// import Card from "../../components/Card";
 import ChefList from "../../components/ChefList";
+import "../../App.css";
+import "../custom.css";
+import { Container } from "../../components/Grid";
 
 function Transformative() {
   return (
@@ -31,7 +33,9 @@ function Transformative() {
           </div>
         </div>
       </div>
+      <Container>
       <ChefList />
+      </Container>
     </div>
   );
 }

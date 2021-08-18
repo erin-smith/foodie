@@ -1,15 +1,21 @@
-import React from 'react';
+import React from "react";
 import cutlery from "../../assets/fonts/style.css";
 
-function Jumbotron(){
-return(
-<div className="jumbotron feature" id="feature">
-    <div className="container">
-        <h1><span className="glyphicon glyphicon-cutlery" src={cutlery}/> &nbsp; Food Culture & Restaurant Finder!</h1>
-        <p>An Ode to Chefs & Restaurants that instill joy in your palate & elevate food culture in the U.S. </p>
+function Jumbotron() {
+  return (
+    <div className="jumbotron feature" id="feature">
+      <div className="container">
+        <h1>
+          <span className="glyphicon glyphicon-cutlery" src={cutlery} /> &nbsp;
+          Food Culture & Restaurant Finder!
+        </h1>
+        <p>
+          An Ode to Chefs & Restaurants that instill joy in your palate &
+          elevate food culture in the U.S.{" "}
+        </p>
+      </div>
     </div>
-</div>
-)
+  );
 }
 
 export default Jumbotron;
