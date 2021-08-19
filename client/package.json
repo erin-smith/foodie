@@ -34,19 +34,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@babel/preset-react": "^7.12.13"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "server.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/erin-smith/foodie.git"
-  },
-  "author": "Erin Smith",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/erin-smith/foodie/issues"
-  },
-  "homepage": "https://github.com/erin-smith/foodie"
+  "devDependencies": { }
 }
