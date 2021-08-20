@@ -1,42 +1,35 @@
 // npm packages
-const express = require('express');
-const app = express();
-const path = require("path");
-// const cors = require ('cors');
+const express = require("express");
+const cors = require("cors");
+const compression = require("compression");
 
-// const corsOptions = {
-//   origin: "http://localhost:3001"
-// };
-
-// app.use(cors(corsOptions));
+const corsOptions = {
+  origin: "http://localhost:3001"
+};
 
 // EXPRESS
+const app = express();
+app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static("public"));
+app.use(cors(corsOptions));
 
 // Setting up port and requiring models
 const db = require("./models");
 
-db.sequelize.sync({force: true}).then(function() {
+db.sequelize.sync({ force: true }).then(() => {
   console.log("Drop and re-sync db");
 });
 
-
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname,  "build", "index.html"));
-  });
 }
 
-
-//ROUTES
-require('./routes/html-routes.js')(app);
-require('./routes/api-routes.js')(app);
-
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
 const PORT = process.env.PORT || 3001;
-  app.listen(PORT, function() {
-    console.log(`API server started on port ${PORT}, YAY`);
-  });
+app.listen(PORT, () => {
+  console.log(`API server started on port ${PORT}, YAY`);
+});
