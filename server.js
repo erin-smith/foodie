@@ -1,6 +1,7 @@
 // npm packages
 const express = require("express");
 const cors = require("cors");
+const path = require('path');
 const compression = require("compression");
 
 const corsOptions = {
@@ -28,6 +29,12 @@ if (process.env.NODE_ENV === "production") {
 
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
+
+const chefs = require('/api/chefs');
+app.use('/api/chefs', chefs);
+
+const locals = require('/api/locals');
+app.use('/api/locals', locals);
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {

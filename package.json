@@ -32,6 +32,7 @@
     "mysql2": "^2.3.0",
     "sequelize": "^6.6.5"
   },
+  "proxy": "http://localhost:8000",
   "bugs": {
     "url": "https://github.com/erin-smith/foodie/issues"
   },
