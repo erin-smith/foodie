@@ -30,9 +30,13 @@
     "if-env": "^1.0.4",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.0",
+    "node": "^16.6.1",
     "sequelize": "^6.6.5"
   },
-  "proxy": "http://localhost:8000",
+  "engines": {
+    "node": "16.6.1"
+  },
+  "proxy": "http://localhost:5000",
   "bugs": {
     "url": "https://github.com/erin-smith/foodie/issues"
   },

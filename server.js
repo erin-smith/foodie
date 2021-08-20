@@ -5,7 +5,7 @@ const path = require('path');
 const compression = require("compression");
 
 const corsOptions = {
-  origin: "http://localhost:8000"
+  origin: "http://localhost:5000"
 };
 
 // EXPRESS
@@ -30,13 +30,7 @@ if (process.env.NODE_ENV === "production") {
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
-const chefs = require('/api/chefs');
-app.use('/api/chefs', chefs);
-
-const locals = require('/api/locals');
-app.use('/api/locals', locals);
-
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`API server started on port ${PORT}, YAY`);
 });
