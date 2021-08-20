@@ -2,13 +2,13 @@
 const express = require('express');
 const app = express();
 const path = require("path");
-const cors = require ('cors');
+// const cors = require ('cors');
 
-const corsOptions = {
-  origin: "http://localhost:3001"
-};
+// const corsOptions = {
+//   origin: "http://localhost:3001"
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // EXPRESS
 app.use(express.urlencoded({ extended: true }));
@@ -24,7 +24,7 @@ db.sequelize.sync({force: true}).then(function() {
 
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static(path.join(__dirname, "client/build")));
 };
 
 
@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === "production") {
 require('./routes/html-routes.js')(app);
 require('./routes/api-routes.js')(app);
 
-app.get("/", function(req, res) {
+app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
