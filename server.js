@@ -4,7 +4,7 @@ const cors = require("cors");
 const compression = require("compression");
 
 const corsOptions = {
-  origin: "http://localhost:3001"
+  origin: "http://localhost:8000"
 };
 
 // EXPRESS
@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === "production") {
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`API server started on port ${PORT}, YAY`);
 });

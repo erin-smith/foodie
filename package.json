@@ -4,6 +4,7 @@
   "description": "An Interactive Food Dashboard app that Celebrates chefs that have revolutionized American Cuisine, Showcases Local favorites in San Diego, CA, and allows users to query a FourSquare API to search find their own new favorite restaurants! ",
   "main": "server.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "npm run client",
