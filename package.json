@@ -10,9 +10,9 @@
     "client": "cd client && npm start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "lint": "eslint"
   },
-    "lint": "eslint",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/erin-smith/foodie.git"
