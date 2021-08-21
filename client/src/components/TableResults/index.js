@@ -4,9 +4,10 @@ import { Venue } from "../Venue";
 import { Search } from "../Search";
 import "../../pages/custom.css";
 
+
 class TableResults extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       error: null,
       isLoaded: false,
@@ -62,13 +63,16 @@ class TableResults extends Component {
           });
         },
         (error) => {
-          console.log(error);
+          this.setState({
+            isLoaded: true,
+            error
+          });
         }
       );
   }
 
   render() {
-    const { error, isLoaded } = this.state;
+    const { error, isLoaded, venues } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
