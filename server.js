@@ -2,7 +2,6 @@
 const express = require("express");
 const cors = require("cors");
 const compression = require("compression");
-
 const routes = require("./routes");
 
 // Setting up port and requiring models
@@ -15,6 +14,7 @@ const corsOptions = {
 
 // EXPRESS
 const app = express();
+
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -41,3 +41,4 @@ db.sequelize.sync({ force: true }).then(() => {
 app.listen(PORT, () => {
   console.log(`API server started on port ${PORT}, YAY`);
 });
+

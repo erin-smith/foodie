@@ -28,6 +28,8 @@ const config = {
 }[env];
 console.log(config);
 
+const FAVORITE_URL = `${process.env.FAVORITE_URL}`;
+console.log(FAVORITE_URL);
 
 let sequelize;
 if (config.use_env_variable) {
