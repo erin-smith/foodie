@@ -30,7 +30,7 @@ function Footer() {
                     : "nav-link"
                 }
               >
-                <h3>Privacy</h3>
+                <h3>Credits</h3>
               </Link>
             </div>
             <div className="col-sm-4 footer-info-item">

@@ -4,11 +4,11 @@ const cors = require("cors");
 const compression = require("compression");
 
 // Setting up port and requiring models
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8081;
 const db = require("./models");
 
 const corsOptions = {
-  origin: "http://localhost:3001"
+  origin: "http://localhost:8081"
 };
 
 // EXPRESS
