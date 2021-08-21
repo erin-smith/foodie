@@ -3,16 +3,17 @@
 ## Description
   An Interactive Food Dashboard app that Celebrates chefs that have revolutionized American Cuisine, Showcases Local favorites in San Diego, CA, and allows users to query a [FourSquare API](https://www.developer.foursquare.com) to search find their own new favorite restaurants!  The app displays scrollable "Transformative" chef summaries, a page with local Hotspots in San Diego, a Search page for users, and a Suggestion Box page for updates and new info to keep the app current and relevant.    
     
-  [Link to project](https://github.com/erin-smith/foodie):https://github.com/erin-smith/foodie
+  [Link to project](https://chef-love.herokuapp.com/):https://chef-love.herokuapp.com/
 
 ## Technologies Used  
   
 - Language: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-- Controller: [Express](https://expressjs.com/), [Sequelize](https://sequelize.org/master/)
+- Controller: [Sequelize](https://sequelize.org/master/)
 - Database: [MySQL](https://www.mysqltutorial.org/mysql-group-by.aspx/)
 - View: [React](https://reactjs.org/)
-- CSS Framework: [Bootstrap](https://getbootstrap.com/)
+- CSS Framework: [Bootstrap](https://getbootstrap.com/), custom overrides
 - React Router: [react router](https://www.npmjs.com/package/react-router-dom)
+- Server & API routes: [Node.js](https://nodejs.org/en/), [Express.js](https://www.npmjs.com/package/express)
 - Unit Test framework: [Jest](https://jestjs.io/)
 - Unit Test library for UI: [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 - IDE: [VSCode](https://code.visualstudio.com/)
@@ -20,13 +21,14 @@
 ## Dirctory Files:  
 
     .
+    ├── client
+       ├── public
+       ├── src   
     ├── controllers
     ├── db
     ├── models
     ├── node_modules
-    ├── public
     ├── routes
-    ├── src
     ├── .env
     ├── .gitignore
     ├── package.json
