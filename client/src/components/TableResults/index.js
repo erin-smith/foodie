@@ -27,7 +27,7 @@ class TableResults extends Component {
     let setVenueState = this.setState.bind(this);
     const fourSquare_API =
       "https://api.foursquare.com/v2/venues/explore?&client_id=";
-    const REACT_APP_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+    const REACT_APP_CLIENT_ID = `${process.env.REACT_APP_CLIENT_ID}`;
     function formatDate(date) {
       var d = new Date(date),
         month = "" + (d.getMonth() + 1),
