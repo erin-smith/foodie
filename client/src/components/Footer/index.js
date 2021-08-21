@@ -1,8 +1,7 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
 
 function Footer() {
-  const location = useLocation();
+
 
   return (
     <footer>

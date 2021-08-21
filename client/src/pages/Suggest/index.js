@@ -35,7 +35,7 @@ class Suggest extends Component {
     } else if (!this.state.message) {
       alert(`Please enter your message`);
     } else {
-      alert(`Hello ${this.state.fullName}`);
+      alert(`Hello ${this.state.fullName}, Thanks! We'll be in touch`);
     }
 
     const msg = {
@@ -55,8 +55,7 @@ class Suggest extends Component {
     console.log(settings);
     mail.sendMail(settings).then(function (response) {
     	console.log(response);
-    })
-    alert("Thanks! We'll be in touch");
+    });
 
     //---------
 
@@ -90,65 +89,7 @@ class Suggest extends Component {
         <div className="row">
           <div className="col-md 4" />
           <div className="col-md 4">
-            <form className="myForm m-1">
-              <label htmlFor="chef_name">Chef Name </label>
-              <input
-                type="text"
-                className="chef_name"
-                id="chef_name"
-                required
-              />
-              <label htmlFor="place">Restaurant </label>
-              <input type="text" className="venue_name" id="venue_number" />
-              <label htmlFor="location">City, State</label>
-              <input type="text" className="city_state" id="city_state" />
-              <fieldset>
-                <legend>Which category would you like to add to?</legend>
-                <label>
-                  {" "}
-                  <input
-                    type="radio"
-                    className="transformative"
-                    id="transform"
-                    required
-                    value="transformative"
-                  />{" "}
-                  &nbsp;Transformative &nbsp;
-                </label>
-                <label>
-                  {" "}
-                  <input
-                    type="radio"
-                    className="local"
-                    id="local"
-                    required
-                    value="local"
-                  />{" "}
-                  &nbsp;Local &nbsp;
-                </label>
-                <label>
-                  {" "}
-                  <input
-                    type="radio"
-                    className="other"
-                    id="other"
-                    required
-                    value="other"
-                  />{" "}
-                  &nbsp;Other Suggestion
-                </label>
-              </fieldset>
-
-              <label htmlFor="pickup_time">
-                Latest date that Restaurant was confirmed Open
-              </label>
-              <input
-                type="datetime-local"
-                className="access_time"
-                id="access_time"
-                required
-              />
-
+            <form className="myForm m-5">
               <label htmlFor="client_name">Your Full Name</label>
               <input
                 value={this.state.fullName}

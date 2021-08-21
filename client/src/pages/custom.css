@@ -120,6 +120,8 @@ h6 {
 .footer-info {
     padding: 10px 0;
     background: #f7f7f7;
+    position:sticky;
+    width: 100%;
 }
 
 .footer-info,
