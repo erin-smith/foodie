@@ -1,11 +1,14 @@
 // npm packages
 const express = require("express");
 const cors = require("cors");
-const path = require('path');
 const compression = require("compression");
 
+// Setting up port and requiring models
+const PORT = process.env.PORT || 3001;
+const db = require("./models");
+
 const corsOptions = {
-  origin: "http://localhost:5000"
+  origin: "http://localhost:3001"
 };
 
 // EXPRESS
@@ -16,12 +19,6 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(cors(corsOptions));
 
-// Setting up port and requiring models
-const db = require("./models");
-
-db.sequelize.sync({ force: true }).then(() => {
-  console.log("Drop and re-sync db");
-});
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -30,7 +27,9 @@ if (process.env.NODE_ENV === "production") {
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
-const PORT = process.env.PORT || 5000;
+db.sequelize.sync({ force: true }).then(() => {
+  console.log("Drop and re-sync db");
+});
 app.listen(PORT, () => {
   console.log(`API server started on port ${PORT}, YAY`);
 });

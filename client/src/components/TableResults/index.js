@@ -41,7 +41,7 @@ class TableResults extends Component {
     const v = formatDate(Date.now());
     fetch(
       fourSquare_API +
-      `${process.env.REACT_APP_CLIENT_ID}` +
+      REACT_APP_CLIENT_ID +
         "&v=" +
         v +
         "&categoryId=4bf58dd8d48988d1c4941735&radius=5000&near=" +
