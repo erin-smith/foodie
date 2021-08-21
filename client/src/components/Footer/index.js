@@ -10,43 +10,16 @@ function Footer() {
         <div className="container">
           <div className="row">
             <div className="col-sm-4 footer-info-item">
-              <Link
-                to="/about"
-                className={
-                  location.pathname === "/about"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-              >
-                <h3>About</h3>
-              </Link>
+            <a href="https://github.com/erin-smith" target="_blank" rel="noopener noreferrer" alt="Github" height="100px"><h4>GitHub  &nbsp;<i
+              className="fab fa-github"></i></h4></a>
             </div>
             <div className="col-sm-4 footer-info-item">
-              <Link
-                to="/privacy"
-                className={
-                  location.pathname === "/privacy"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-              >
-                <h3>Credits</h3>
-              </Link>
+            <a href="mailto:erin.acumen@gmail.com" target="_blank" rel="noopener noreferrer" alt="Email" height="100px"><h4>Email &nbsp;<i
+              className="fas fa-at"></i></h4></a>
             </div>
             <div className="col-sm-4 footer-info-item">
-              <Link
-                to="/contact"
-                className={
-                  location.pathname === "/contact"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-              >
-                <h3>
-                  <span className="glyphicon glyphicon-list-alt"></span>
-                  Contact Us{" "}
-                </h3>
-              </Link>
+            <a href="https://www.linkedin.com/in/erin-c-smith/" target="_blank" rel="noopener noreferrer" alt="LinkedIn" height="100px"><h4>LinkedIn &nbsp;<i
+              className="fab fa-linkedin"></i></h4></a>
             </div>
           </div>
         </div>
