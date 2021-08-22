@@ -6,6 +6,7 @@ class ChefList extends React.Component {
 
   componentDidMount() {
     this.getChefs();
+    
   }
 
   getChefs = () => {
@@ -20,7 +21,7 @@ class ChefList extends React.Component {
     const { chefs } = this.state;
     return (
       <div>
-        <table class="table table-bordered table-striped table-responsive-stack mt-3 text-center" id="tableOne">
+        <table className="table table-bordered table-striped table-responsive-stack mt-3 text-center" id="tableOne">
           <thead>
             <tr>
               <th scope="col" className="text-center">

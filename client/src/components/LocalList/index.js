@@ -21,7 +21,7 @@ class LocalList extends React.Component {
     const { locals } = this.state;
     return (
       <div>
-        <table class="table table-bordered table-striped table-responsive-stack mt-3 text-center" id="tableTwo">
+        <table className="table table-bordered table-striped table-responsive-stack mt-3 text-center" id="tableTwo">
           <thead>
             <tr>
               <th scope="col" className="text-center">

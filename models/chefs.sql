@@ -24,7 +24,7 @@ INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Ilan Hall", "Top Che
 INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Hung Huynh", "Top Chef Season 3 Winner", "Warrior", "Los Angeles, CA");
 INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Stephanie Izard", "Top Chef Season 4 Winner", "Girl & the Goat, Little Goat Diner, Duck Duck Goat, Cabra, Sugargoat Bakery", "Chicago, IL");
 INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Hosea Rosenberg", "Top Chef Season 5 Winner", "Blackbelly, Santo", "Boulder CO");
-INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Michael Voltaggio", "Top Chef Season 6 Winner", "Sack Sandwiches (L.A.), STRFSH (Santa Monica), Voltaggio Brothers Steakhouse (Oxon Hill, Md), Estuary (Washington DC)", "Los Angeles, CA");
+INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Michael Voltaggio", "Top Chef Season 6 Winner", "Sack Sandwiches, STRFSH, Voltaggio Brothers Steakhouse, Estuary", "Los Angeles, CA");
 INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Richard Blais", "Top Chef Season 8 Winner", "Juniper & Ivy, Crack Shack, Ember & Rye", "San Diego, CA");
 INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Kristen Kish", "Top Chef Season 10 Winner", "Arlo Grey", "Austin, TX");
 INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Nicholas Elmi", "Top Chef Season 11 Winner", "Laurel, ITV, Royal Boucherie", "Philadelphia, PA");
@@ -39,7 +39,7 @@ INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Melissa Perello", "1
 INSERT INTO chefs(name, awards, restaurants, city) VALUES ("David Chang", "2 Michelin Stars", "Momofuku Ko", "New York, NY");
 INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Iliana Regan", "1 Michelin Star", "Elizabeth, The Milkweed Inn", "Nahma Township, the UP, MI");
 INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Thomas Keller", "3 Michelin Stars", "The French Laundry, Per Se (New York, NY)", "Napa, CA");
-INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Wolfgang Puck", "2 Michelin Stars", "Spago (Beverly Hills, Las Vegs, Maui), Postrio, Trattoria del Lupo, CUT", "Los Angeles, CA");
+INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Wolfgang Puck", "2 Michelin Stars", "Spago, Postrio, Trattoria del Lupo, CUT", "Los Angeles, CA");
 INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Christopher Kostow", "3 Michelin Stars", "The Restaurant at Meadowood", "Napa Valley, CA");
 INSERT INTO chefs(name, awards, restaurants, city) VALUES ("David Kinch", "3 Michelin Stars", "Manresa", "Los Gatos, CA");
 INSERT INTO chefs(name, awards, restaurants, city) VALUES ("Michael Tusk", "3 Michelin Stars", "Quince", "San Francisco, CA");
