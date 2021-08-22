@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-// import API from "../../utils/API";
 import fire from "../../assets/fonts/style.css";
 
 function Header() {
@@ -57,18 +56,6 @@ function Header() {
               }
             >
               Explore
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/suggest"
-              className={
-                location.pathname === "/suggest"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Suggest
             </Link>
           </li>
         </ul>

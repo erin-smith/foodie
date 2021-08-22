@@ -9,7 +9,7 @@
      grid-gap: .8em .5em;
      background: beige;
      padding: 1.2em;
-     width: 36em;
+     width:fit-content;
    }
    .myForm > label,
    .myForm > fieldset  {

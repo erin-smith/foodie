@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Container, Row, Col } from "../Grid";
 
 export class Search extends Component {
   constructor(props) {
@@ -19,6 +20,9 @@ export class Search extends Component {
 
   render() {
     return (
+      <Container>
+      <Row className="flex-wrap-reverse">
+        <Col size="xs-12">
       <form className="search" onSubmit={this.handleSubmit}>
         <div className="form-group">
           <label htmlFor="Query">
@@ -47,6 +51,9 @@ export class Search extends Component {
           </button>
         </div>
       </form>
+      </Col>
+      </Row>
+      </Container>
     );
   }
 }

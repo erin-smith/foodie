@@ -1,5 +1,6 @@
 import React from "react";
 
+
 class LocalList extends React.Component {
   state = { locals: [] };
 

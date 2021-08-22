@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import glass from "../../assets/fonts/style.css";
-import "./style.css";
+import "../../App.css";
+import "../custom.css";
+import "./style.css"
 import mail from "../../utils/mail"
+import { Container } from "../../components/Grid";
+
 class Suggest extends Component {
   state = {
     fullName: "",
@@ -86,6 +90,7 @@ class Suggest extends Component {
             </div>
           </div>
         </div>
+        <Container>
         <div className="row">
           <div className="col-md 4" />
           <div className="col-md 4">
@@ -134,6 +139,7 @@ class Suggest extends Component {
           </div>
           <div className="col-md 4" />
         </div>
+        </Container>
       </>
     );
   }

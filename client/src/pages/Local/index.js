@@ -7,7 +7,7 @@ import { Container } from "../../components/Grid";
 
 function Local() {
   return (
-    <div>
+    <>
       <div className="jumbotron" id="local">
         <div className="container-fluid">
           <div className="row">
@@ -28,7 +28,7 @@ function Local() {
       <Container>
         <LocalList/>
       </Container>
-    </div>
+      </>
   );
 }
 

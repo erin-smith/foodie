@@ -7,7 +7,7 @@ import { Container } from "../../components/Grid";
 
 function Transformative() {
   return (
-    <div>
+    <>
       <div className="jumbotron" id="transform">
         <div className="container-fluid">
           <div className="row">
@@ -36,7 +36,7 @@ function Transformative() {
       <Container>
       <ChefList />
       </Container>
-    </div>
+    </>
   );
 }
 
