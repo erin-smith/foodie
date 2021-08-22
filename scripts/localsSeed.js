@@ -1,4 +1,6 @@
-[
+const db = require("../models");
+
+const localsSeed = [
 	{
 		"id" : 1,
 		"name" : "Richard Blais",
@@ -189,3 +191,4 @@
 		"city" : "La Jolla, CA"
 	}
 ]
+module.exports = localsSeed;

@@ -1,4 +1,7 @@
-[
+
+const db = require("../models");
+
+const chefsSeed = [
 	{
 		"id" : 1,
 		"name" : "Ilan Hall",
@@ -286,4 +289,5 @@
 		"restaurants" : "Blue Hill at Stone Barns",
 		"city" : "Pocantico Hilla, NY"
 	}
-]
+];
+
