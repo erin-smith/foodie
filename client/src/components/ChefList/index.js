@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 
 class ChefList extends React.Component {
   state = { chefs: [] };
@@ -19,7 +20,7 @@ class ChefList extends React.Component {
     const { chefs } = this.state;
     return (
       <div>
-        <table className="table table-striped mt-3 text-center">
+        <table class="table table-bordered table-striped table-responsive-stack mt-3 text-center" id="tableOne">
           <thead>
             <tr>
               <th scope="col" className="text-center">
@@ -51,7 +52,7 @@ class ChefList extends React.Component {
             <h3>No Results to Display</h3>
           )}
         </table>
-      </div>
+        </div>
     );
   }
 }

@@ -1,0 +1,81 @@
+.navbar-nav {
+    padding-top: 0;
+    padding-bottom: 0; 
+    margin-left: auto;
+}
+.navbar-brand {
+    margin: 0;
+    margin: auto;
+}
+
+nav a {
+    margin-right: 10px;
+    justify-content: center;
+}
+
+#fire {
+     height: 42px;
+     width: 42px;
+     margin-right:10px;
+ }
+
+
+ /* Responsive layout - makes a two column-layout instead of four columns */
+ @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+    .navbar-nav {
+      text-align: center;
+      display: inline block;
+      font-size: smaller;
+  }
+
+  .navbar-brand {
+      width: 50%;
+      margin: auto;
+      text-align: left;
+  }
+
+  .navbar {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+  }
+  #fire {
+    height: 35px;
+    width: 35px;
+    margin-right:8px;
+    margin-left: 0;
+    align-items: left;
+}
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .column {
+      width: 100%;
+    }
+    .navbar-nav {
+      text-align: center;
+      display: inline block;
+      font-size: smaller;
+      width: 100%;
+  }
+
+  .navbar-brand {
+      width: 50%;
+      margin: auto;
+  }
+
+  .navbar {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+  }
+  #fire {
+    margin-left: 0;
+    align-content: left;
+}
+
+
+  } 

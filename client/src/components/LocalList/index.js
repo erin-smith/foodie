@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 
 
 class LocalList extends React.Component {
@@ -20,7 +21,7 @@ class LocalList extends React.Component {
     const { locals } = this.state;
     return (
       <div>
-        <table className="table table-striped mt-3 text-center">
+        <table class="table table-bordered table-striped table-responsive-stack mt-3 text-center" id="tableTwo">
           <thead>
             <tr>
               <th scope="col" className="text-center">
@@ -52,7 +53,7 @@ class LocalList extends React.Component {
             <h3>No Results to Display</h3>
           )}
         </table>
-      </div>
+        </div>
     );
   }
 }

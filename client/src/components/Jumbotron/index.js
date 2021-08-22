@@ -9,10 +9,10 @@ function Jumbotron() {
           <span className="glyphicon glyphicon-cutlery" src={cutlery} /> &nbsp;
           Food Culture & Restaurant Finder!
         </h1>
-        <p>
+        <p><b>
           An Ode to Chefs & Restaurants that instill joy in your palate &
           elevate food culture in the U.S.{" "}
-        </p>
+        </b></p>
       </div>
     </div>
   );

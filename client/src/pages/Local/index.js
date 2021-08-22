@@ -17,10 +17,7 @@ function Local() {
                 <span className="glyphicon glyphicon-leaf" src={leaf} /> San
                 Diego Local Favorite Hot Spots{" "}
               </h1>
-              <p>
-                "You don't need a silver fork to eat good food. --Paul
-                Prudhomme"
-              </p>
+              <p>"To eat well, I always disagree with critics who say that all restaurants should be fine dining. You can get a Michelin star if you serve the best hamburger in the world. - David Chang"</p>
             </div>
           </div>
         </div>
