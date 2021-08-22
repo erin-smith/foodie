@@ -27,13 +27,7 @@ try {
   console.error('Unable to connect to the database:', error);
 }
 
-connection.connect((err)=> {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-});
+connection.connect();
 
-module.exports = connection;
+
 module.exports = sequelize;

@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import Transformative from './pages/Transformative';
 import Suggest from './pages/Suggest';
 import Explore from './pages/Explore';
-// import Error from './pages/Error';
 
 
 

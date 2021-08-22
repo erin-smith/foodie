@@ -26,13 +26,11 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "http-proxy-middleware": "^2.0.1",
     "if-env": "^1.0.4",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.0",
     "node": "^16.6.1",
-    "sequelize": "^6.6.5",
-    "sequelize-cli": "^6.2.0"
+    "sequelize": "^6.6.5"
   },
   "engines": {
     "node": "16.6.1"
