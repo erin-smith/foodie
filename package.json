@@ -9,7 +9,7 @@
     "start:prod": "node server.js",
     "start:dev": "npm run client",
     "client": "cd client && npm run start",
-    "seed": "node seeders/chefSeeds.js",
+    "seed": "node seeders/chefSeeds.js && node seeders/localSeeds.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
