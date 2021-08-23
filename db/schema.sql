@@ -19,3 +19,4 @@ CREATE TABLE locals (
   city varchar (60) NOT NULL,
   PRIMARY KEY(id)
 );
+

@@ -6,7 +6,7 @@ const routes = require("./routes");
 
 // Setting up port and requiring models
 const PORT = process.env.PORT || 3001;
-const db = require("./models");
+const db = require("./db/models");
 
 const corsOptions = {
   origin: "http://localhost:3001"
@@ -26,8 +26,6 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(cors(corsOptions));
 
-// require("./routes/html-routes.js")(app);
-// require("./routes/api-routes.js")(app);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));

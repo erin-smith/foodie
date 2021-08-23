@@ -1,4 +1,4 @@
-const db = require('../models/index');
+const db = require('../db/models/index');
 const chefs = db.chefs;
 const locals = db.locals;
 
