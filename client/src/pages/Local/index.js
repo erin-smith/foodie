@@ -4,10 +4,13 @@ import leaf from "../../assets/fonts/style.css";
 import "../../App.css";
 import "../custom.css";
 import { Container } from "../../components/Grid";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 function Local() {
   return (
     <>
+    <Header/>
       <div className="jumbotron" id="local">
         <div className="container-fluid">
           <div className="row">
@@ -25,6 +28,7 @@ function Local() {
       <Container>
         <LocalList/>
       </Container>
+      <Footer/>
       </>
   );
 }

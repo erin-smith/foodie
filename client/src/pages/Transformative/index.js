@@ -4,10 +4,13 @@ import ChefList from "../../components/ChefList";
 import "../../App.css";
 import "../custom.css";
 import { Container } from "../../components/Grid";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 function Transformative() {
   return (
     <>
+    <Header/>
       <div className="jumbotron" id="transform">
         <div className="container-fluid">
           <div className="row">
@@ -36,6 +39,7 @@ function Transformative() {
       <Container>
       <ChefList />
       </Container>
+      <Footer/>
     </>
   );
 }

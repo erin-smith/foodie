@@ -7,10 +7,10 @@ function Jumbotron() {
       <div className="container">
         <h1>
           <span className="glyphicon glyphicon-cutlery" src={cutlery} /> &nbsp;
-          Food Culture & Restaurant Finder!
+          Food Culture &amp; Restaurant Finder!
         </h1>
         <p><b>
-          An Ode to Chefs & Restaurants that instill joy in your palate &
+          An Ode to Chefs &amp; Restaurants that instill joy in your palate &amp;
           elevate food culture in the U.S.{" "}
         </b></p>
       </div>

@@ -24,7 +24,8 @@
      font-weight: bold;
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) 
+  {
      .table-responsive-stack tr {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;

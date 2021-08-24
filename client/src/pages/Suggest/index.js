@@ -5,6 +5,8 @@ import "../custom.css";
 import "./style.css"
 import mail from "../../utils/mail"
 import { Container } from "../../components/Grid";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 class Suggest extends Component {
   state = {
@@ -73,6 +75,7 @@ class Suggest extends Component {
   render() {
     return (
       <>
+      <Header/>
         <div className="jumbotron" id="explore">
           <div className="container-fluid">
             <div className="row">
@@ -140,6 +143,7 @@ class Suggest extends Component {
           <div className="col-md 4" />
         </div>
         </Container>
+        <Footer/>
       </>
     );
   }
