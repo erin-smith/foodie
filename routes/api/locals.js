@@ -5,3 +5,4 @@ router.route("/")
   .get(controller.findAllLocals);
 
 module.exports = router;
+
